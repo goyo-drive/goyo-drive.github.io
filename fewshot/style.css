@@ -1,0 +1,42 @@
+/* Fewshot 소개·정책 페이지. 앱과 같은 흑백 톤. */
+:root {
+  --ink: #000;
+  --paper: #fff;
+  --muted: rgba(0, 0, 0, 0.58);
+  --rule: rgba(0, 0, 0, 0.14);
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --ink: #fff; --paper: #000; --muted: rgba(255, 255, 255, 0.6); --rule: rgba(255, 255, 255, 0.16); }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Apple SD Gothic Neo", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+header { display: flex; align-items: center; gap: 14px; margin-bottom: 40px; }
+header img { width: 56px; height: 56px; border-radius: 13px; }
+header a { color: inherit; text-decoration: none; }
+.wordmark { font: 600 22px/1.2 -apple-system, "SF Pro Display", sans-serif; font-stretch: expanded; letter-spacing: 0.01em; }
+h1 { font-size: 30px; line-height: 1.25; margin: 0 0 8px; font-weight: 600; font-stretch: expanded; }
+h2 { font-size: 19px; margin: 36px 0 8px; font-weight: 600; }
+h3 { font-size: 16px; margin: 24px 0 4px; font-weight: 600; }
+p, li { color: var(--ink); }
+.muted, .meta { color: var(--muted); }
+.meta { font-size: 14px; }
+a { color: var(--ink); text-underline-offset: 3px; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 48px 0; }
+ul { padding-left: 20px; }
+nav.lang { font-size: 14px; margin-bottom: 28px; }
+nav.lang a { margin-right: 14px; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+.links a {
+  border: 1px solid var(--rule); border-radius: 12px; padding: 10px 16px;
+  text-decoration: none; font-weight: 600; font-size: 15px;
+}
+.links a.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--rule); font-size: 14px; color: var(--muted); }
